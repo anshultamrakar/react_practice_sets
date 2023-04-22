@@ -27,9 +27,9 @@ export const CartProvider = ({children}) => {
     },[])
   
   
-    const handleAddToCart = (id) => {
-      const items = products.filter(product => product.id === id )
-      setCartItems(items)
+    const handleAddToCart = (product) => {
+      const cartlists = [...cartItems , product]
+      setCartItems(cartlists)
     }
 
 

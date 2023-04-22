@@ -9,13 +9,13 @@ const ProductList = () => {
 
   return (
     <div className='App'>
-      { isLoading ? <p>Loading .....</p> : products.map(({id , name , description , price }) => (
-        <div key = {id}>
-        <h4>{name}</h4>
-        <p>{description}</p>
-        <p>Price : {price} INR </p>
+      { isLoading ? <p>Loading .....</p> : products.map(product => (
+        <div key = {product.id}>
+        <h4>{product.name}</h4>
+        <p>{product.description}</p>
+        <p>Price : {product.price} INR </p>
          <Link><p>Visit item</p></Link>
-         <button onClick = {() => handleAddToCart(id)}>Add to cart</button>
+         <button onClick = {() => handleAddToCart(product)}>Add to cart</button>
         </div>
       ))}
     </div>
