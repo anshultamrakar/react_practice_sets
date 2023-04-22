@@ -3,7 +3,7 @@ import React from 'react'
 const Missing = () => {
   return (
     <div className='App'>
-        <h2>Not Found </h2>
+        <h2> 404 : Page Not Found </h2>
     </div>
   )
 }
