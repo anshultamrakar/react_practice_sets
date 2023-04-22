@@ -5,7 +5,7 @@ import CartContext from "../Context/CartContext"
 
 
 const ProductList = () => {
-   const {products , isLoading , handleAddToCart} = useContext(CartContext)
+   const {products , isLoading , handleAddToCart , handleAddToWish} = useContext(CartContext)
 
   return (
     <div className='App'>
@@ -16,6 +16,7 @@ const ProductList = () => {
         <p>Price : {product.price} INR </p>
          <Link><p>Visit item</p></Link>
          <button onClick = {() => handleAddToCart(product)}>Add to cart</button>
+         <button onClick = {() => handleAddToWish(product)}>Add to WishList</button>
         </div>
       ))}
     </div>

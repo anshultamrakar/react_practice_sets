@@ -4,7 +4,7 @@ import CartContext from '../Context/CartContext'
 
 
 const Cart = () => {
-  const {cartItems} = useContext(CartContext)
+  const {cartItems , handleRemoveFromCart } = useContext(CartContext)
 
   return (
     <div className='App'>
@@ -20,6 +20,8 @@ const Cart = () => {
           <h3>{item.name}</h3>
           <p>{item.description}</p>
           <p> Price : {item.price}</p>
+          <button onClick={() => handleRemoveFromCart(item.id)}>Remove from cart</button>
+          <hr/>
           </div>
         ))}
     </div>
